@@ -1,0 +1,19 @@
+﻿@model IssueTracker.Models.Project
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="text-align:center;margin-top:25px"> Project Details</h2>
+<hr />
+<div style="margin-top:50px;">
+    <ul class="list-group col-md-auto ">
+        <li class="list-group-item">Project Name: @Model.name</li>
+        <li class="list-group-item">Project Description: @Model.description</li>
+        <li class="list-group-item">Created Date: @Model.createdDate.ToShortDateString()</li>
+        <li class="list-group-item">Last Updated: @Model.updatedDate</li>
+    </ul>
+    <hr />
+    <a class="btn btn-primary text-wrap"  asp-action="Index" asp-controller="project">Back to Projects</a>
+   
+</div>
+
